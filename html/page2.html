@@ -1,0 +1,514 @@
+<!DOCTYPE html><html><head>
+	<title>vail_basic</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="file:////Users/shunsonohara/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.8.11/crossnote/dependencies/katex/katex.min.css">
+	
+	
+	
+	
+	
+	<style>
+	code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+	</style>
+	<!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function () {
+  // your code here
+});
+</script></head><body for="html-export">
+  
+  
+	<div class="crossnote markdown-preview  ">
+	
+<h1 id="vail-入門基礎">VAIL 入門（基礎） </h1>
+<p>Vantiq アプリケーション開発時に使用する独自言語である <strong>VAIL</strong> の基本についての解説です。</p>
+<p>詳細事項に関しては 🌐<a href="https://dev.vantiq.co.jp/docs/system/rules/index.html">リファレンス</a> をご参照ください。</p>
+<h2 id="目次">目次 </h2>
+<ul>
+<li><a href="#vail-%E5%85%A5%E9%96%80%E5%9F%BA%E7%A4%8E">VAIL 入門（基礎）</a>
+<ul>
+<li><a href="#%E7%9B%AE%E6%AC%A1">目次</a></li>
+<li><a href="#procedure-%E3%81%AE%E4%BD%9C%E6%88%90%E3%81%A8%E5%AE%9F%E8%A1%8C%E6%96%B9%E6%B3%95">Procedure の作成と実行方法</a>
+<ul>
+<li><a href="#project-%E3%81%AE%E4%BF%9D%E5%AD%98">Project の保存</a></li>
+<li><a href="#procedure-%E3%81%AE%E4%BD%9C%E6%88%90">Procedure の作成</a></li>
+<li><a href="#procedure-%E3%81%AE%E5%AE%9F%E8%A1%8C">Procedure の実行</a></li>
+</ul>
+</li>
+<li><a href="#%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E3%82%A2%E3%82%A6%E3%83%88">コメントアウト</a>
+<ul>
+<li><a href="#%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E3%82%A2%E3%82%A6%E3%83%88-1">コメントアウト</a></li>
+</ul>
+</li>
+<li><a href="#%E5%A4%89%E6%95%B0">変数</a>
+<ul>
+<li><a href="#%E5%A4%89%E6%95%B0%E5%AE%A3%E8%A8%80%E3%81%A8%E5%88%9D%E6%9C%9F%E5%8C%96">変数宣言と初期化</a></li>
+</ul>
+</li>
+<li><a href="#%E3%83%87%E3%83%BC%E3%82%BF%E5%9E%8B">データ型</a>
+<ul>
+<li><a href="#%E3%83%87%E3%83%BC%E3%82%BF%E5%9E%8B%E3%81%AE%E4%B8%80%E8%A6%A7">データ型の一覧</a></li>
+</ul>
+</li>
+<li><a href="#%E6%BC%94%E7%AE%97%E5%AD%90">演算子</a>
+<ul>
+<li><a href="#%E6%BC%94%E7%AE%97%E5%AD%90%E3%81%AE%E4%B8%80%E8%A6%A7">演算子の一覧</a></li>
+</ul>
+</li>
+<li><a href="#%E6%AF%94%E8%BC%83">比較</a>
+<ul>
+<li><a href="#%E6%AF%94%E8%BC%83%E6%BC%94%E7%AE%97%E5%AD%90%E3%81%AE%E4%B8%80%E8%A6%A7">比較演算子の一覧</a></li>
+</ul>
+</li>
+<li><a href="#%E6%9D%A1%E4%BB%B6%E5%88%86%E5%B2%90">条件分岐</a>
+<ul>
+<li><a href="#%E6%8B%AC%E5%BC%A7%E3%81%AA%E3%81%97%E3%81%AE-if-%E6%96%87">括弧なしの if 文</a></li>
+<li><a href="#%E6%8B%AC%E5%BC%A7%E3%81%82%E3%82%8A%E3%81%AE-if-%E6%96%87">括弧ありの if 文</a></li>
+</ul>
+</li>
+<li><a href="#%E7%B9%B0%E3%82%8A%E8%BF%94%E3%81%97%E5%87%A6%E7%90%86">繰り返し処理</a>
+<ul>
+<li><a href="#for-%E6%96%87">for 文</a></li>
+<li><a href="#until">UNTIL</a></li>
+<li><a href="#type">Type</a></li>
+</ul>
+</li>
+<li><a href="#%E9%85%8D%E5%88%97">配列</a>
+<ul>
+<li><a href="#%E9%85%8D%E5%88%97-1">配列</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BE%8B%E5%A4%96%E5%87%A6%E7%90%86">例外処理</a></li>
+<li><a href="#try-catch">Try catch</a></li>
+<li><a href="#%E5%AE%9F%E8%A3%85%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB">実装サンプル</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="procedure-の作成と実行方法">Procedure の作成と実行方法 </h2>
+<p>VAIL を使うにあたり、 Procedure が必要になります。<br>
+ここでは Procedure の作成方法と実行方法について解説します。</p>
+<h3 id="project-の保存">Project の保存 </h3>
+<ol>
+<li>
+<p>任意の Namespace に 任意の名前で Project を作成します。</p>
+<p><img src="./imgs/vail_procedure_create_01.png" alt="vail_procedure_create_01.png"></p>
+</li>
+</ol>
+<h3 id="procedure-の作成">Procedure の作成 </h3>
+<ol>
+<li>
+<p>ナビゲーションバーから <code>追加</code> → <code>Advanced</code> → <code>Procedure...</code> をクリックします。</p>
+<p><img src="./imgs/vail_procedure_create_02.png" alt="vail_procedure_create_02.png"></p>
+</li>
+<li>
+<p><code>＋ 新規 Procedure</code> をクリックします。</p>
+<p><img src="./imgs/vail_procedure_create_03.png" alt="vail_procedure_create_03.png"></p>
+</li>
+<li>
+<p>Procedure の雛形が作成されます。</p>
+<p><img src="./imgs/vail_procedure_create_04.png" alt="vail_procedure_create_04.png"></p>
+</li>
+<li>
+<p>Procedure 名を任意の名前に変更し、保存します。（例：vailSampleProcedure）</p>
+<p><img src="./imgs/vail_procedure_create_05.png" alt="vail_procedure_create_05.png"></p>
+<blockquote>
+<p><strong>補足</strong><br>
+Procedure が保存されると、画面左側の Project Contents に作成した Procedure が表示されます。</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="procedure-の実行">Procedure の実行 </h3>
+<ol>
+<li>
+<p>Procedure ペインの左上の <code>実行ボタン</code> をクリックします。</p>
+<p><img src="./imgs/vail_procedure_run_01.png" alt="vail_procedure_run_01.png"></p>
+</li>
+<li>
+<p>Procedure の引数が設定されていない場合は、そのまま <code>実行</code> をクリックします。</p>
+<p><img src="./imgs/vail_procedure_run_02.png" alt="vail_procedure_run_02.png"></p>
+</li>
+<li>
+<p>実行結果が表示されます。<br>
+<code>OK</code> をクリックして画面を閉じます。</p>
+<p><img src="./imgs/vail_procedure_run_03.png" alt="vail_procedure_run_03.png"></p>
+<blockquote>
+<p><strong>補足</strong><br>
+<code>return</code> が存在しない場合は、最後に利用された変数の値が出力されます。</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="コメントアウト">コメントアウト </h2>
+<p>他の言語と同様に VAIL でもコメントアウトを記述できます。</p>
+<h3 id="コメントアウト-1">コメントアウト </h3>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token constant">PROCEDURE</span> <span class="token function">commentOut</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 1行ずつ、</span>
+<span class="token comment">// コメントを書くことができます</span>
+
+<span class="token comment">/*
+複数行まとめてコメントを書くことができます
+1. xxxxxxxx
+2. yyyyyyy
+3. wwwww
+*/</span>
+</code></pre><h2 id="変数">変数 </h2>
+<p>VAIL では変数の宣言に <code>var</code> を用います。<br>
+また、変数宣言と値の代入を同時に行うこともできます。</p>
+<blockquote>
+<p><strong>補足</strong><br>
+JavaScript like ですが <code>;</code> は使用しません。</p>
+</blockquote>
+<h3 id="変数宣言と初期化">変数宣言と初期化 </h3>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token constant">PROCEDURE</span> <span class="token function">declareVariable</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> a
+<span class="token keyword keyword-var">var</span> b <span class="token operator">=</span> <span class="token number">0</span>
+</code></pre><h2 id="データ型">データ型 </h2>
+<p>VAIL では下記のデータ型が利用できます。</p>
+<h3 id="データ型の一覧">データ型の一覧 </h3>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token constant">PROCEDURE</span> <span class="token function">vailTypes</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">// String</span>
+<span class="token keyword keyword-var">var</span> a <span class="token operator">=</span> <span class="token string">"Hello"</span>
+
+<span class="token comment">// Interger</span>
+<span class="token keyword keyword-var">var</span> b <span class="token operator">=</span> <span class="token number">1</span>
+
+<span class="token comment">// Real</span>
+<span class="token keyword keyword-var">var</span> c <span class="token operator">=</span> <span class="token number">1.23</span>
+
+<span class="token comment">// Boolean</span>
+<span class="token keyword keyword-var">var</span> d <span class="token operator">=</span> <span class="token boolean">true</span>
+
+<span class="token comment">// DateTime</span>
+<span class="token keyword keyword-var">var</span> e <span class="token operator">=</span> <span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">// Object</span>
+<span class="token comment">// keyに "" があってもなくても動作します</span>
+<span class="token keyword keyword-var">var</span> d <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token string-property property">"id"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token string-property property">"value"</span><span class="token operator">:</span> <span class="token number">100</span>
+<span class="token punctuation">}</span>
+<span class="token keyword keyword-var">var</span> e <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token number">100</span>
+<span class="token punctuation">}</span>
+</code></pre><h2 id="演算子">演算子 </h2>
+<p>VAIL では下記の演算子が利用できます。</p>
+<h3 id="演算子の一覧">演算子の一覧 </h3>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token constant">PROCEDURE</span> <span class="token function">binaryOperator</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> a <span class="token operator">=</span> <span class="token number">2</span>
+<span class="token keyword keyword-var">var</span> b <span class="token operator">=</span> <span class="token number">3</span>
+<span class="token keyword keyword-var">var</span> c <span class="token operator">=</span> <span class="token string">"Hello"</span>
+
+<span class="token keyword keyword-var">var</span> d <span class="token operator">=</span> a <span class="token operator">+</span> b  <span class="token comment">// 5</span>
+<span class="token keyword keyword-var">var</span> e <span class="token operator">=</span> a <span class="token operator">*</span> b  <span class="token comment">// 6</span>
+<span class="token keyword keyword-var">var</span> f <span class="token operator">=</span> a <span class="token operator">**</span> b <span class="token comment">// 8</span>
+<span class="token keyword keyword-var">var</span> g <span class="token operator">=</span> f <span class="token operator">/</span> <span class="token number">2</span>  <span class="token comment">// 4</span>
+<span class="token keyword keyword-var">var</span> h <span class="token operator">=</span> b <span class="token operator">%</span> a  <span class="token comment">// 1</span>
+<span class="token keyword keyword-var">var</span> i <span class="token operator">=</span> c <span class="token operator">+</span> <span class="token string">" World "</span> <span class="token operator">+</span> a <span class="token comment">// Hello World 2</span>
+
+a <span class="token operator">+=</span> <span class="token number">1</span> <span class="token comment">// 3</span>
+b <span class="token operator">-=</span> <span class="token number">1</span> <span class="token comment">// 2</span>
+</code></pre><details>
+<summary>実際に確認してみよう！</summary>
+<p>上記の演算子が正しく動いているか Log に出力して、確認してみましょう。</p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token constant">PROCEDURE</span> <span class="token function">binaryOperatorLog</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> a <span class="token operator">=</span> <span class="token number">2</span>
+<span class="token keyword keyword-var">var</span> b <span class="token operator">=</span> <span class="token number">3</span>
+<span class="token keyword keyword-var">var</span> c <span class="token operator">=</span> <span class="token string">"Hello"</span>
+
+<span class="token keyword keyword-var">var</span> d <span class="token operator">=</span> a <span class="token operator">+</span> b  <span class="token comment">// 5</span>
+log<span class="token punctuation">.</span><span class="token method function property-access">info</span><span class="token punctuation">(</span><span class="token string">"d: "</span> <span class="token operator">+</span> d<span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> e <span class="token operator">=</span> a <span class="token operator">*</span> b  <span class="token comment">// 6</span>
+log<span class="token punctuation">.</span><span class="token method function property-access">info</span><span class="token punctuation">(</span><span class="token string">"e: "</span> <span class="token operator">+</span> e<span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> f <span class="token operator">=</span> a <span class="token operator">**</span> b <span class="token comment">// 8</span>
+log<span class="token punctuation">.</span><span class="token method function property-access">info</span><span class="token punctuation">(</span><span class="token string">"f: "</span> <span class="token operator">+</span> f<span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> g <span class="token operator">=</span> f <span class="token operator">/</span> <span class="token number">2</span>  <span class="token comment">// 4</span>
+log<span class="token punctuation">.</span><span class="token method function property-access">info</span><span class="token punctuation">(</span><span class="token string">"g: "</span> <span class="token operator">+</span> g<span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> h <span class="token operator">=</span> b <span class="token operator">%</span> a  <span class="token comment">// 1</span>
+log<span class="token punctuation">.</span><span class="token method function property-access">info</span><span class="token punctuation">(</span><span class="token string">"h: "</span> <span class="token operator">+</span> h<span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> i <span class="token operator">=</span> c <span class="token operator">+</span> <span class="token string">" World "</span> <span class="token operator">+</span> a <span class="token comment">// Hello World 2</span>
+log<span class="token punctuation">.</span><span class="token method function property-access">info</span><span class="token punctuation">(</span><span class="token string">"i: "</span> <span class="token operator">+</span> i<span class="token punctuation">)</span>
+
+a <span class="token operator">+=</span> <span class="token number">1</span> <span class="token comment">// 3</span>
+log<span class="token punctuation">.</span><span class="token method function property-access">info</span><span class="token punctuation">(</span><span class="token string">"a: "</span> <span class="token operator">+</span> a<span class="token punctuation">)</span>
+
+b <span class="token operator">-=</span> <span class="token number">1</span> <span class="token comment">// 2</span>
+log<span class="token punctuation">.</span><span class="token method function property-access">info</span><span class="token punctuation">(</span><span class="token string">"b: "</span> <span class="token operator">+</span> b<span class="token punctuation">)</span>
+</code></pre></details>
+<h2 id="比較">比較 </h2>
+<p>VAIL では下記の比較演算子が利用できます。</p>
+<h3 id="比較演算子の一覧">比較演算子の一覧 </h3>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token constant">PROCEDURE</span> <span class="token function">logicalOperator</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token number">3</span> <span class="token operator">==</span> <span class="token number">3</span> <span class="token comment">// true</span>
+<span class="token number">3</span> <span class="token operator">==</span> <span class="token string">"3"</span> <span class="token comment">// false</span>
+
+<span class="token string">"foo"</span> <span class="token operator">==</span> <span class="token string">"hoge"</span> <span class="token comment">// false</span>
+<span class="token string">"foo"</span> <span class="token operator">!=</span> <span class="token string">"hoge"</span> <span class="token comment">// true</span>
+
+<span class="token boolean">true</span> <span class="token constant">AND</span> <span class="token boolean">true</span> <span class="token comment">// true</span>
+<span class="token boolean">true</span> and <span class="token boolean">true</span> <span class="token comment">// true</span>
+<span class="token boolean">true</span> <span class="token operator">&amp;&amp;</span> <span class="token boolean">true</span> <span class="token comment">// true</span>
+
+<span class="token boolean">true</span> <span class="token constant">OR</span> <span class="token boolean">false</span> <span class="token comment">// true</span>
+<span class="token boolean">true</span> or <span class="token boolean">false</span> <span class="token comment">// true</span>
+<span class="token boolean">true</span> <span class="token operator">||</span> <span class="token boolean">false</span> <span class="token comment">// true</span>
+
+<span class="token constant">NOT</span> <span class="token boolean">true</span> <span class="token comment">// false</span>
+<span class="token operator">!</span><span class="token boolean">true</span> <span class="token comment">// false</span>
+</code></pre><details>
+<summary>実際に確認してみよう！</summary>
+<p>上記の比較演算子が正しく動いているか Log に出力して、確認してみましょう。</p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token constant">PROCEDURE</span> <span class="token function">logicalOperatorLog</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> a <span class="token operator">=</span> <span class="token number">3</span> <span class="token operator">==</span> <span class="token number">3</span> <span class="token comment">// true</span>
+log<span class="token punctuation">.</span><span class="token method function property-access">info</span><span class="token punctuation">(</span><span class="token string">"a: "</span> <span class="token operator">+</span> a<span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> b <span class="token operator">=</span> <span class="token number">3</span> <span class="token operator">==</span> <span class="token string">"3"</span> <span class="token comment">// false</span>
+log<span class="token punctuation">.</span><span class="token method function property-access">info</span><span class="token punctuation">(</span><span class="token string">"a: "</span> <span class="token operator">+</span> b<span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> c <span class="token operator">=</span> <span class="token string">"foo"</span> <span class="token operator">==</span> <span class="token string">"hoge"</span> <span class="token comment">// false</span>
+log<span class="token punctuation">.</span><span class="token method function property-access">info</span><span class="token punctuation">(</span><span class="token string">"a: "</span> <span class="token operator">+</span> c<span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> d <span class="token operator">=</span> <span class="token string">"foo"</span> <span class="token operator">!=</span> <span class="token string">"hoge"</span> <span class="token comment">// true</span>
+log<span class="token punctuation">.</span><span class="token method function property-access">info</span><span class="token punctuation">(</span><span class="token string">"d: "</span> <span class="token operator">+</span> d<span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> e <span class="token operator">=</span> <span class="token boolean">true</span> <span class="token constant">AND</span> <span class="token boolean">true</span> <span class="token comment">// true</span>
+log<span class="token punctuation">.</span><span class="token method function property-access">info</span><span class="token punctuation">(</span><span class="token string">"e: "</span> <span class="token operator">+</span> e<span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> f <span class="token operator">=</span> <span class="token boolean">true</span> and <span class="token boolean">true</span> <span class="token comment">// true</span>
+log<span class="token punctuation">.</span><span class="token method function property-access">info</span><span class="token punctuation">(</span><span class="token string">"f: "</span> <span class="token operator">+</span> f<span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> g <span class="token operator">=</span> <span class="token boolean">true</span> <span class="token operator">&amp;&amp;</span> <span class="token boolean">true</span> <span class="token comment">// true</span>
+log<span class="token punctuation">.</span><span class="token method function property-access">info</span><span class="token punctuation">(</span><span class="token string">"g: "</span> <span class="token operator">+</span> g<span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> h <span class="token operator">=</span> <span class="token boolean">true</span> <span class="token constant">OR</span> <span class="token boolean">false</span> <span class="token comment">// true</span>
+log<span class="token punctuation">.</span><span class="token method function property-access">info</span><span class="token punctuation">(</span><span class="token string">"h: "</span> <span class="token operator">+</span> h<span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> i <span class="token operator">=</span> <span class="token boolean">true</span> or <span class="token boolean">false</span> <span class="token comment">// true</span>
+log<span class="token punctuation">.</span><span class="token method function property-access">info</span><span class="token punctuation">(</span><span class="token string">"i: "</span> <span class="token operator">+</span> i<span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> j <span class="token operator">=</span> <span class="token boolean">true</span> <span class="token operator">||</span> <span class="token boolean">false</span> <span class="token comment">// true</span>
+log<span class="token punctuation">.</span><span class="token method function property-access">info</span><span class="token punctuation">(</span><span class="token string">"j: "</span> <span class="token operator">+</span> j<span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> k <span class="token operator">=</span> <span class="token constant">NOT</span> <span class="token boolean">true</span> <span class="token comment">// false</span>
+log<span class="token punctuation">.</span><span class="token method function property-access">info</span><span class="token punctuation">(</span><span class="token string">"k: "</span> <span class="token operator">+</span> k<span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> l <span class="token operator">=</span> <span class="token operator">!</span><span class="token boolean">true</span> <span class="token comment">// false</span>
+log<span class="token punctuation">.</span><span class="token method function property-access">info</span><span class="token punctuation">(</span><span class="token string">"l: "</span> <span class="token operator">+</span> l<span class="token punctuation">)</span>
+</code></pre></details>
+<h2 id="条件分岐">条件分岐 </h2>
+<p>VAIL での if 文は下記のとおりです。<br>
+なお、条件部分は括弧付き、括弧なしのどちらでも動作します。</p>
+<h3 id="括弧なしの-if-文">括弧なしの if 文 </h3>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token constant">PROCEDURE</span> <span class="token function">flowControlIf1</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> a <span class="token operator">=</span> <span class="token number">10</span>
+<span class="token keyword control-flow keyword-if">if</span> a <span class="token operator">&gt;</span> <span class="token number">11</span> <span class="token punctuation">{</span>
+  log<span class="token punctuation">.</span><span class="token method function property-access">info</span><span class="token punctuation">(</span><span class="token string">"hoge"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span> <span class="token keyword control-flow keyword-else">else</span> <span class="token keyword control-flow keyword-if">if</span> a <span class="token operator">&gt;</span> <span class="token number">9</span> <span class="token punctuation">{</span>
+  log<span class="token punctuation">.</span><span class="token method function property-access">info</span><span class="token punctuation">(</span><span class="token string">"fuga"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>結果</strong></p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code>fuga
+</code></pre><h3 id="括弧ありの-if-文">括弧ありの if 文 </h3>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token constant">PROCEDURE</span> <span class="token function">flowControlIf2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> a <span class="token operator">=</span> <span class="token number">10</span>
+<span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>a <span class="token operator">&gt;</span> <span class="token number">11</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  log<span class="token punctuation">.</span><span class="token method function property-access">info</span><span class="token punctuation">(</span><span class="token string">"hoge"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span> <span class="token keyword control-flow keyword-else">else</span> <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>a <span class="token operator">&gt;</span> <span class="token number">9</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  log<span class="token punctuation">.</span><span class="token method function property-access">info</span><span class="token punctuation">(</span><span class="token string">"fuga"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>結果</strong></p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code>fuga
+</code></pre><blockquote>
+<p><strong>注意</strong><br>
+VAIL は論理演算子のショートカットを行わないことがあります。<br>
+下記に具体的な例を示します。</p>
+<p>まずは比較するための Procedure を用意します。</p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token constant">PROCEDURE</span> <span class="token function">compare</span><span class="token punctuation">(</span>arg1<span class="token punctuation">,</span> arg2<span class="token punctuation">)</span>
+<span class="token keyword control-flow keyword-return">return</span> arg1 <span class="token operator">==</span> arg2
+</code></pre><p>以下の例では右辺も評価され、 Procedure が呼び出されてしまうため、エラーとなります。</p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token constant">PROCEDURE</span> <span class="token function">flowControlIf3</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> stack <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"first"</span><span class="token punctuation">]</span>
+<span class="token comment">// stack の最後の2要素を比べて同じであれば pop する</span>
+<span class="token keyword control-flow keyword-if">if</span> <span class="token function">length</span><span class="token punctuation">(</span>stack<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">1</span> <span class="token operator">&amp;&amp;</span> <span class="token function">compare</span><span class="token punctuation">(</span><span class="token parameter">stack<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> stack<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">pop</span><span class="token punctuation">(</span>stack<span class="token punctuation">)</span>    
+<span class="token punctuation">}</span>
+</code></pre><p>以下の様に実装すると安全です。</p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token constant">PROCEDURE</span> <span class="token function">flowControlIf4</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> stack <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"first"</span><span class="token punctuation">]</span>
+<span class="token comment">// stack の最後の2要素を比べて同じであれば pop する</span>
+<span class="token keyword control-flow keyword-if">if</span> <span class="token function">length</span><span class="token punctuation">(</span>stack<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">1</span> <span class="token punctuation">{</span>
+<span class="token keyword control-flow keyword-if">if</span> <span class="token function">compare</span><span class="token punctuation">(</span><span class="token parameter">stack<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> stack<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token function">pop</span><span class="token punctuation">(</span>stack<span class="token punctuation">)</span>    
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><p>参照: <a href="https://dev.vantiq.co.jp/docs/system/rules/index.html#logical-operators">https://dev.vantiq.co.jp/docs/system/rules/index.html#logical-operators</a></p>
+</blockquote>
+<h2 id="繰り返し処理">繰り返し処理 </h2>
+<p>VAIL での for 文は Python の for 文と似ています。<br>
+なお、 if 文と同様に条件部分は括弧付き、括弧なしのどちらでも動作します。</p>
+<h3 id="for-文">for 文 </h3>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token constant">PROCEDURE</span> <span class="token function">iterationFor</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> a <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token keyword control-flow keyword-for">for</span> i <span class="token keyword keyword-in">in</span> <span class="token function">range</span><span class="token punctuation">(</span><span class="token parameter"><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">1</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  a <span class="token operator">=</span> a <span class="token operator">*</span> <span class="token number">2</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword control-flow keyword-return">return</span> a
+</code></pre><blockquote>
+<p><strong>補足</strong><br>
+range 関数： range(from, to, increment)</p>
+</blockquote>
+<p><strong>結果</strong></p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token number">32</span>
+</code></pre><h3 id="until">UNTIL </h3>
+<p><code>UNTIL</code> を使うと条件に一致した時点でループから抜けます。</p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token constant">PROCEDURE</span> <span class="token function">iterationForUntil</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> a <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token keyword control-flow keyword-for">for</span> i <span class="token keyword keyword-in">in</span> <span class="token function">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token constant">UNTIL</span> i <span class="token operator">==</span> <span class="token number">2</span> <span class="token punctuation">{</span>
+  a <span class="token operator">=</span> a <span class="token operator">*</span> <span class="token number">2</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword control-flow keyword-return">return</span> a
+</code></pre><p><strong>結果</strong></p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token number">8</span>
+</code></pre><h3 id="type">Type </h3>
+<p>Type からレコードを取得し、レコードごとに処理を実行することもできます。</p>
+<details>
+<summary>Member Type のレコード</summary>
+<p>サンプルとなる Member Type のレコードは下記のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">id</th>
+<th style="text-align:left">name</th>
+<th style="text-align:right">age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:left">Suzuki</td>
+<td style="text-align:right">21</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Yamada</td>
+<td style="text-align:right">35</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:left">Tanaka</td>
+<td style="text-align:right">23</td>
+</tr>
+</tbody>
+</table>
+</details>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token constant">PROCEDURE</span> <span class="token function">iterationForType</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> targetAge
+<span class="token keyword control-flow keyword-for">for</span> member <span class="token keyword keyword-in">in</span> <span class="token constant">SELECT</span> <span class="token constant">FROM</span> <span class="token maybe-class-name">Members</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow keyword-if">if</span><span class="token punctuation">(</span>member<span class="token punctuation">.</span><span class="token property-access">name</span> <span class="token operator">==</span> <span class="token string">"Tanaka"</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	  targetAge <span class="token operator">=</span> member<span class="token punctuation">.</span><span class="token property-access">age</span> <span class="token comment">// 23</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword control-flow keyword-return">return</span> targetAge
+</code></pre><p><strong>結果</strong></p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token number">23</span>
+</code></pre><blockquote>
+<p><strong>Type のサンプル</strong><br>
+サンプルとして用いた Type は <a href="./data/vail_basic_type.zip">こちら</a> から、ダウンロードできます。<br>
+Project にインポートして利用してください。</p>
+<p>Type のインポート方法は <a href="./../type_import/readme.md">こちら</a> から参照してください。</p>
+</blockquote>
+<h2 id="配列">配列 </h2>
+<p>VAIL でも配列が利用できます。</p>
+<h3 id="配列-1">配列 </h3>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token constant">PROCEDURE</span> <span class="token function">vailArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> myArray <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token string">"Apple"</span><span class="token punctuation">,</span><span class="token string">"Peach"</span><span class="token punctuation">]</span>
+<span class="token keyword keyword-var">var</span> firstElement <span class="token operator">=</span> myArray<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token comment">// 1</span>
+<span class="token keyword keyword-var">var</span> lastElement <span class="token operator">=</span> myArray<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token comment">// "Peach"</span>
+myArray<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"Banana"</span>
+
+<span class="token keyword control-flow keyword-return">return</span> myArray
+</code></pre><p><strong>結果</strong></p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token punctuation">[</span>
+  <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token number">2</span><span class="token punctuation">,</span>
+  <span class="token number">3</span><span class="token punctuation">,</span>
+  <span class="token string">"Apple"</span><span class="token punctuation">,</span>
+  <span class="token string">"Peach"</span><span class="token punctuation">,</span>
+  <span class="token keyword null nil keyword-null">null</span><span class="token punctuation">,</span>
+  <span class="token keyword null nil keyword-null">null</span><span class="token punctuation">,</span>
+  <span class="token keyword null nil keyword-null">null</span><span class="token punctuation">,</span>
+  <span class="token keyword null nil keyword-null">null</span><span class="token punctuation">,</span>
+  <span class="token keyword null nil keyword-null">null</span><span class="token punctuation">,</span>
+  <span class="token string">"Banana"</span>
+<span class="token punctuation">]</span>
+</code></pre><h2 id="例外処理">例外処理 </h2>
+<p>VAIL では例外処理も利用できます。</p>
+<h2 id="try-catch">Try catch </h2>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token constant">PROCEDURE</span> <span class="token function">flowControlTry</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> results <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword control-flow keyword-try">try</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-var">var</span> a <span class="token operator">=</span> <span class="token function">toInteger</span><span class="token punctuation">(</span><span class="token string">"Hello"</span><span class="token punctuation">)</span> <span class="token comment">// エラーになるソースコード</span>
+  <span class="token function">push</span><span class="token punctuation">(</span>results<span class="token punctuation">,</span> a<span class="token punctuation">)</span>
+<span class="token punctuation">}</span> <span class="token keyword control-flow keyword-catch">catch</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// tryブロック内の処理でエラーが発生した際に実行される</span>
+  <span class="token keyword keyword-var">var</span> a <span class="token operator">=</span> <span class="token string">"Hello, catch: "</span> <span class="token operator">+</span> error
+  <span class="token function">push</span><span class="token punctuation">(</span>results<span class="token punctuation">,</span> a<span class="token punctuation">)</span>
+<span class="token punctuation">}</span> <span class="token keyword control-flow keyword-finally">finally</span> <span class="token punctuation">{</span>
+  <span class="token comment">/* tryブロック内の処理でのエラーが発生の有無に関わらず実行される
+	  finallyブロックは無くてもOK
+  */</span>
+  <span class="token keyword keyword-var">var</span> a <span class="token operator">=</span> <span class="token string">"Hello, finally"</span>
+  <span class="token function">push</span><span class="token punctuation">(</span>results<span class="token punctuation">,</span> a<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword control-flow keyword-return">return</span> results
+</code></pre><p>上記のコードはエラーが発生するため、 <code>catch</code> 、 <code>finally</code> 内のソースコードのみが実行されます。</p>
+<p><strong>結果</strong></p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token punctuation">[</span>
+  <span class="token string">"Hello, catch: [code:io.vantiq.runtime.exception, message:Encountered exception during execution: For input string: \"Hello\", params:[For input string: \"Hello\"]]"</span><span class="token punctuation">,</span>
+  <span class="token string">"Hello, finally"</span>
+<span class="token punctuation">]</span>
+</code></pre><h2 id="実装サンプル">実装サンプル </h2>
+<ul>
+<li><a href="./data/vail_basic_1.34.zip">VAIL 入門（基礎）の実装サンプル（Vantiq 1.34）</a></li>
+<li><a href="./data/vail_basic_1.37.zip">VAIL 入門（基礎）の実装サンプル（Vantiq 1.37）</a></li>
+</ul>
+
+	</div>
+	
+	
+  
+  
+  
+  
+  
+  
+
+  </body></html>

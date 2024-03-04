@@ -1,0 +1,372 @@
+<!DOCTYPE html><html><head>
+	<title>vail_data</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="file:////Users/shunsonohara/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.8.11/crossnote/dependencies/katex/katex.min.css">
+	
+	
+	
+	
+	
+	<style>
+	code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+	</style>
+	<!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function () {
+  // your code here
+});
+</script></head><body for="html-export">
+  
+  
+	<div class="crossnote markdown-preview  ">
+	
+<h1 id="vail-入門外部へのデータ送信">VAIL 入門（外部へのデータ送信） </h1>
+<p><strong>VAIL</strong> を用いて外部にデータを送信する方法を解説します。</p>
+<h2 id="目次">目次 </h2>
+<ul>
+<li><a href="#vail-%E5%85%A5%E9%96%80%E5%A4%96%E9%83%A8%E3%81%B8%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E9%80%81%E4%BF%A1">VAIL 入門（外部へのデータ送信）</a>
+<ul>
+<li><a href="#%E7%9B%AE%E6%AC%A1">目次</a></li>
+<li><a href="#%E3%83%87%E3%83%BC%E3%82%BF%E9%80%81%E4%BF%A1%E5%8F%96%E5%BE%97">データ送信・取得</a>
+<ul>
+<li><a href="#mqtt%E3%83%96%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%BC%E3%81%B8%E3%81%AE%E9%80%81%E4%BF%A1%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8">MQTTブローカーへの送信イメージ</a></li>
+</ul>
+</li>
+<li><a href="#http">HTTP</a>
+<ul>
+<li><a href="#http-remote-source-%E3%81%AE%E8%A8%AD%E5%AE%9A">HTTP Remote Source の設定</a></li>
+<li><a href="#get-%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88">GET リクエスト</a></li>
+<li><a href="#get-%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E3%83%91%E3%82%B9%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF">GET リクエスト（パスパラメータ）</a></li>
+<li><a href="#get-%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E3%82%AF%E3%82%A8%E3%83%AA%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF">GET リクエスト（クエリパラメータ）</a></li>
+<li><a href="#get-%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E3%83%98%E3%83%83%E3%83%80%E3%83%BC">GET リクエスト（ヘッダー）</a></li>
+<li><a href="#post-%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88select-%E6%96%87">POST リクエスト（SELECT 文）</a></li>
+<li><a href="#post-%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88publish-%E6%96%87">POST リクエスト（PUBLISH 文）</a></li>
+<li><a href="#post-%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88using-%E5%8F%A5">POST リクエスト（USING 句）</a></li>
+<li><a href="#post-%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88using-%E5%8F%A5%E3%81%AA%E3%81%97">POST リクエスト（USING 句なし）</a></li>
+<li><a href="#publish-%E6%96%87%E3%81%AE%E6%B3%A8%E6%84%8F%E7%82%B9">PUBLISH 文の注意点</a></li>
+</ul>
+</li>
+<li><a href="#mqttamqpkafka">MQTT、AMQP、Kafka</a>
+<ul>
+<li><a href="#mqtt-source-%E3%81%AE%E8%A8%AD%E5%AE%9A">MQTT Source の設定</a></li>
+<li><a href="#mqtt-%E3%83%96%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%BC%E3%81%B8%E3%81%AE%E3%83%91%E3%83%96%E3%83%AA%E3%83%83%E3%82%B7%E3%83%A5">MQTT ブローカーへのパブリッシュ</a></li>
+<li><a href="#%E6%B3%A8%E6%84%8F%E7%82%B9">注意点</a></li>
+</ul>
+</li>
+<li><a href="#%E5%82%99%E8%80%83">備考</a>
+<ul>
+<li><a href="#source-%E3%82%92%E5%A4%89%E6%95%B0%E3%81%AB%E7%BD%AE%E3%81%8D%E6%8F%9B%E3%81%88%E3%82%8B%E5%A0%B4%E5%90%88">Source を変数に置き換える場合</a></li>
+</ul>
+</li>
+<li><a href="#%E5%AE%9F%E8%A3%85%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB">実装サンプル</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="データ送信取得">データ送信・取得 </h2>
+<p>外部のブローカーへのデータ送信や他サービスの API を実行する際に、使用する構文についての説明です。<br>
+プロトコルごとに一部異なる部分がありますが、基本的な構文は同じです。<br>
+PUBLISH 文 と SELECT 文を使用することができます。</p>
+<h3 id="mqttブローカーへの送信イメージ">MQTTブローカーへの送信イメージ </h3>
+<p><img src="./imgs/mqtt.gif" alt="mqtt"></p>
+<h2 id="http">HTTP </h2>
+<p>まずは、 HTTP Remote Source を作成し、 HTTP の GET リクエストや POST リクエストを試してみます。</p>
+<h3 id="http-remote-source-の設定">HTTP Remote Source の設定 </h3>
+<p>ナビゲーションメニューの <code>追加</code> → <code>Source</code> から <code>新規 Source</code> をクリックします。<br>
+下記の内容を設定します。</p>
+<h4 id="general">General </h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">設定項目</th>
+<th style="text-align:left">設定値</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Source Name</td>
+<td style="text-align:left">VantiqRender</td>
+</tr>
+<tr>
+<td style="text-align:left">Source Type</td>
+<td style="text-align:left">REMOTE</td>
+</tr>
+</tbody>
+</table>
+<h4 id="properties">Properties </h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">設定項目</th>
+<th style="text-align:left">設定値</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Server URI</td>
+<td style="text-align:left"><a href="https://vantiq.onrender.com">https://vantiq.onrender.com</a></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>補足</strong><br>
+上記の API は Python FastAPI で作成した API サンプルになります。<br>
+<a href="https://render.com/">Render</a> という外部サービスで動作しています。<br>
+なお、サンプル API のコードは <a href="./data/VantiqApiTestTools.zip">こちら</a> から確認いただけます。</p>
+</blockquote>
+<h3 id="get-リクエスト">GET リクエスト </h3>
+<p>HTTP GET の最もシンプルな例は、次の記述になります。<br>
+この例では <code>response</code> に GET した内容が入ります。</p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token constant">PROCEDURE</span> <span class="token function">get1</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> response <span class="token operator">=</span> <span class="token constant">SELECT</span> <span class="token constant">FROM</span> <span class="token constant">SOURCE</span> <span class="token maybe-class-name">VantiqRender</span>
+<span class="token keyword control-flow keyword-return">return</span> response
+</code></pre><blockquote>
+<p>エンドポイントや Authorization の設定などは Source 側で設定済みです。<br>
+なお、これらの設定は VAIL 側、 Source 側どちらにでも設定することができます。</p>
+</blockquote>
+<p><strong>結果</strong></p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token punctuation">[</span>
+ <span class="token punctuation">{</span>
+	<span class="token string-property property">"message"</span><span class="token operator">:</span> <span class="token string">"Hello, world!"</span><span class="token punctuation">,</span>
+	<span class="token string-property property">"timestamp"</span><span class="token operator">:</span> <span class="token string">"2023-08-10T02:27:24.743590"</span>
+ <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre><h3 id="get-リクエストパスパラメータ">GET リクエスト（パスパラメータ） </h3>
+<p>次の例では、 VAIL 側に設定値を記述しています。<br>
+<code>WITH</code> 句を使うことで、設定値をリクエストに反映させることができます。</p>
+<p>まずは、 <code>path</code> を設定してみます。<br>
+<code>path</code> を設定すると Souce の <code>Source URI に設定設定されている URI + path</code> でリクエストします。<br>
+つまり Source に <code>https://vantiq.onrender.com</code> と設定されている場合は <code>https://vantiq.onrender.com/horoscope</code> となります。</p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token constant">PROCEDURE</span> <span class="token function">get2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> path <span class="token operator">=</span> <span class="token string">"/horoscope"</span>
+<span class="token keyword keyword-var">var</span> response <span class="token operator">=</span> <span class="token constant">SELECT</span> <span class="token constant">FROM</span> <span class="token constant">SOURCE</span> <span class="token maybe-class-name">VantiqRender</span> <span class="token constant">WITH</span> path <span class="token operator">=</span> path
+<span class="token keyword control-flow keyword-return">return</span> response
+</code></pre><p><strong>結果</strong></p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token punctuation">[</span>
+  <span class="token string">"山羊座"</span>
+<span class="token punctuation">]</span>
+</code></pre><h3 id="get-リクエストクエリパラメータ">GET リクエスト（クエリパラメータ） </h3>
+<p>次に <code>query</code> はクエリパラメータを設定してみます。</p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token constant">PROCEDURE</span> <span class="token function">get3</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> path <span class="token operator">=</span> <span class="token string">"/horoscope"</span>
+<span class="token keyword keyword-var">var</span> query <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token string-property property">"month"</span><span class="token operator">:</span> <span class="token number">12</span>
+<span class="token punctuation">}</span>
+<span class="token keyword keyword-var">var</span> response <span class="token operator">=</span> <span class="token constant">SELECT</span> <span class="token constant">FROM</span> <span class="token constant">SOURCE</span> <span class="token maybe-class-name">VantiqRender</span> <span class="token constant">WITH</span> path <span class="token operator">=</span> path<span class="token punctuation">,</span> query <span class="token operator">=</span> query
+<span class="token keyword control-flow keyword-return">return</span> response
+</code></pre><p><strong>結果</strong></p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token punctuation">[</span>
+  <span class="token string">"魚座"</span>
+<span class="token punctuation">]</span>
+</code></pre><h3 id="get-リクエストヘッダー">GET リクエスト（ヘッダー） </h3>
+<p>ヘッダーを設定する場合は、 <code>headers</code> を用います。</p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token constant">PROCEDURE</span> <span class="token function">get4</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> path <span class="token operator">=</span> <span class="token string">"/auth-area"</span>
+<span class="token keyword keyword-var">var</span> headers <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token string-property property">"Content-type"</span><span class="token operator">:</span> <span class="token string">"application/json"</span><span class="token punctuation">,</span>
+  <span class="token string-property property">"Authorization"</span><span class="token operator">:</span> <span class="token string">"vantiq-token"</span>
+<span class="token punctuation">}</span>
+<span class="token keyword keyword-var">var</span> response <span class="token operator">=</span> <span class="token constant">SELECT</span> <span class="token constant">FROM</span> <span class="token constant">SOURCE</span> <span class="token maybe-class-name">VantiqRender</span> <span class="token constant">WITH</span> path <span class="token operator">=</span> path<span class="token punctuation">,</span> headers <span class="token operator">=</span> headers
+<span class="token keyword control-flow keyword-return">return</span> response
+</code></pre><p><strong>結果</strong></p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token punctuation">[</span>
+ <span class="token string">"Get OK"</span>
+<span class="token punctuation">]</span>
+</code></pre><h3 id="post-リクエストselect-文">POST リクエスト（SELECT 文） </h3>
+<p>POST したい場合は SELECT 文と PUBLISH 文のいずれかを使用できます。</p>
+<p>SELECT 文を使用する場合、デフォルトのメソットは <code>GET</code> になります。<br>
+POST をしたい場合は <code>WITH</code> 句を使用してメソッドに POST を設定します。<br>
+また POST したい内容も設定します。</p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token constant">PROCEDURE</span> <span class="token function">post1</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> data <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">"Hello"</span>
+<span class="token punctuation">}</span>
+<span class="token keyword keyword-var">var</span> response <span class="token operator">=</span> <span class="token constant">SELECT</span> <span class="token constant">FROM</span> <span class="token constant">SOURCE</span> <span class="token maybe-class-name">VantiqRender</span> <span class="token constant">WITH</span> method <span class="token operator">=</span> <span class="token string">"POST"</span><span class="token punctuation">,</span> body <span class="token operator">=</span> data
+</code></pre><p><strong>結果</strong></p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+	  <span class="token string-property property">"message"</span><span class="token operator">:</span> <span class="token string">"Hello, world!"</span><span class="token punctuation">,</span>
+	  <span class="token string-property property">"timestamp"</span><span class="token operator">:</span> <span class="token string">"2023-08-10T07:04:40.013170"</span><span class="token punctuation">,</span>
+	  <span class="token string-property property">"request"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+		  <span class="token string-property property">"body"</span><span class="token operator">:</span> <span class="token string">"{\"id\":1,\"value\":\"Hello\"}"</span>
+	  <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre><h3 id="post-リクエストpublish-文">POST リクエスト（PUBLISH 文） </h3>
+<p>PUBLISH 文を使用する場合はデフォルトで POST になります。<br>
+従って、 body 以外の追加設定は必要ありません。</p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token constant">PROCEDURE</span> <span class="token function">post2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> data <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">"Hello"</span>
+<span class="token punctuation">}</span>
+<span class="token constant">PUBLISH</span> <span class="token punctuation">{</span> <span class="token literal-property property">body</span><span class="token operator">:</span> data <span class="token punctuation">}</span> <span class="token constant">TO</span> <span class="token constant">SOURCE</span> <span class="token maybe-class-name">VantiqRender</span>
+</code></pre><p><strong>結果</strong></p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token boolean">true</span>
+</code></pre><h3 id="post-リクエストusing-句">POST リクエスト（USING 句） </h3>
+<p>SELECT 文の時のように設定値を VAIL 側で持たせたい場合は、 WITH 句ではなく <code>USING</code> 句を使います。<br>
+WITH 句とは記述方法が異なり、 object 形式を使用します。<br>
+USING 句を使用せず、 body と合わせて1つの Object で記述することもできます。</p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token constant">PROCEDURE</span> <span class="token function">post3</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> data <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">"Hello"</span>
+<span class="token punctuation">}</span>
+<span class="token keyword keyword-var">var</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">"PUT"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">"/anything"</span>
+<span class="token punctuation">}</span>
+<span class="token constant">PUBLISH</span> <span class="token punctuation">{</span> <span class="token literal-property property">body</span><span class="token operator">:</span> data <span class="token punctuation">}</span> <span class="token constant">TO</span> <span class="token constant">SOURCE</span> <span class="token maybe-class-name">VantiqRender</span> <span class="token constant">USING</span> config
+</code></pre><p><strong>結果</strong></p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token boolean">true</span>
+</code></pre><h3 id="post-リクエストusing-句なし">POST リクエスト（USING 句なし） </h3>
+<p>USING 句を使わない場合は次のようになります。</p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token constant">PROCEDURE</span> <span class="token function">post4</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> data <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">"Hello"</span>
+<span class="token punctuation">}</span>
+<span class="token constant">PUBLISH</span> <span class="token punctuation">{</span> <span class="token literal-property property">body</span><span class="token operator">:</span> data<span class="token punctuation">,</span> <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">"PUT"</span><span class="token punctuation">,</span> <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">"/anything"</span> <span class="token punctuation">}</span> <span class="token constant">TO</span> <span class="token constant">SOURCE</span> <span class="token maybe-class-name">VantiqRender</span>
+</code></pre><p><strong>結果</strong></p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token boolean">true</span>
+</code></pre><h3 id="publish-文の注意点">PUBLISH 文の注意点 </h3>
+<p>PUBLISH 文で注意が必要なのは <code>{ body: data }</code> の部分です。<br>
+HTTP POST の場合、 key に <code>body</code> が必要です。<br>
+例えば <code>{ message: data }</code> などとするとエラーとなります。</p>
+<p>SELECT 文と PUBLISH 文をどう使い分けるかに関しては <code>返り値</code> が必要かどうかで決まります。  SELECT 文の場合は GET の時と同様に、レスポンス内容が返り値となります。<br>
+PUBLISH 文は単純に POST が成功したかどうかを <code>true</code> か <code>false</code> のみで返します。</p>
+<p>PUT や DELETE などこの他のメソッドに関しては、 SELECT 文、 PUBLISH 文いずれもデフォルトのメソッドではありませんので <code>method</code> に設定を行って使用してください。</p>
+<h2 id="mqtt-amqp-kafka">MQTT、AMQP、Kafka </h2>
+<p>次は、 MQTT Source を作成し、 MQTT ブローカーにメッセージを PUBLISH してみます。<br>
+MQTT や AMQP 、 Kafka などのブローカーにメッセージを PUBLISH する際には PUBLISH 文を使用します。</p>
+<h3 id="mqtt-source-の設定">MQTT Source の設定 </h3>
+<p>ナビゲーションメニューの <code>追加</code> → <code>Source</code> から <code>新規 Source</code> をクリックします。<br>
+下記の内容を設定します。</p>
+<h4 id="general-1">General </h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">設定項目</th>
+<th style="text-align:left">設定値</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Source Name</td>
+<td style="text-align:left">VantiqMqttBroker</td>
+</tr>
+<tr>
+<td style="text-align:left">Source Type</td>
+<td style="text-align:left">MQTT</td>
+</tr>
+</tbody>
+</table>
+<h4 id="server-uri">Server URI </h4>
+<p><code>+ Server URI を追加</code> をクリックし、下記の内容を設定します。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">設定項目</th>
+<th style="text-align:left">設定値</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Server URI</td>
+<td style="text-align:left">mqtt://public.vantiq.com:1883</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>上記の MQTT ブローカーは、検証用のパブリックなブローカーとなっています。</p>
+</blockquote>
+<h3 id="mqtt-ブローカーへのパブリッシュ">MQTT ブローカーへのパブリッシュ </h3>
+<p>次の例は MQTT ブローカーに PUBLISH する例です。<br>
+AMQP や Kafka の場合でもほとんど同じ記述になります。</p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token constant">PROCEDURE</span> <span class="token function">mqtt1</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> data <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">"Hello"</span>
+<span class="token punctuation">}</span>
+<span class="token keyword keyword-var">var</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">topic</span><span class="token operator">:</span> <span class="token string">"/test/event"</span>
+<span class="token punctuation">}</span>
+<span class="token constant">PUBLISH</span> <span class="token punctuation">{</span> <span class="token literal-property property">message</span><span class="token operator">:</span> data <span class="token punctuation">}</span> <span class="token constant">TO</span> <span class="token constant">SOURCE</span> <span class="token maybe-class-name">VantiqMqttBroker</span> <span class="token constant">USING</span> config
+<span class="token comment">//PUBLISH { topic: "/test/event", message: data } TO SOURCE VantiqMqttBroker</span>
+</code></pre><p><strong>結果</strong></p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token boolean">true</span>
+</code></pre><p>送信先となる <code>topic</code> の設定が必要となります。</p>
+<h3 id="注意点">注意点 </h3>
+<p>注意点は HTTP の時と同様に <code>{ message: data }</code> の部分です。<br>
+HTTPでは key を <code>body</code> にする必要がありましたが、 <code>MQTT</code> と <code>AMQP</code> の場合は <code>message</code> 、 <code>Kafka</code> の場合は <code>value</code> になります。</p>
+<h4 id="プロトコルと-key-の一覧表">プロトコルと Key の一覧表 </h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">プロトコル</th>
+<th style="text-align:left">Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">HTTP</td>
+<td style="text-align:left">body</td>
+</tr>
+<tr>
+<td style="text-align:left">MQTT</td>
+<td style="text-align:left">message</td>
+</tr>
+<tr>
+<td style="text-align:left">AMQP</td>
+<td style="text-align:left">message</td>
+</tr>
+<tr>
+<td style="text-align:left">Kafka</td>
+<td style="text-align:left">value</td>
+</tr>
+</tbody>
+</table>
+<h2 id="備考">備考 </h2>
+<h3 id="source-を変数に置き換える場合">Source を変数に置き換える場合 </h3>
+<p>Source を変数に置き換える場合は、下記のように変数名に <code>@</code> をつけて使用します。</p>
+<p>これは、 SELECT 文でも PUBLISH 文でも利用できます。</p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token constant">PROCEDURE</span> <span class="token function">sourceName1</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> sourceName <span class="token operator">=</span> <span class="token string">"VantiqRender"</span>
+<span class="token keyword keyword-var">var</span> response <span class="token operator">=</span> <span class="token constant">SELECT</span> <span class="token constant">FROM</span> <span class="token constant">SOURCE</span> @sourceName
+<span class="token keyword control-flow keyword-return">return</span> response
+</code></pre><p>Procedure で引数を受け取る場合は下記のようになります。</p>
+<pre data-role="codeBlock" data-info="JavaScript" class="language-javascript JavaScript"><code><span class="token constant">PROCEDURE</span> <span class="token function">sourceName2</span><span class="token punctuation">(</span>sourceName <span class="token known-class-name class-name">String</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-var">var</span> response <span class="token operator">=</span> <span class="token constant">SELECT</span> <span class="token constant">FROM</span> <span class="token constant">SOURCE</span> @sourceName
+<span class="token keyword control-flow keyword-return">return</span> response
+</code></pre><p>🌐 <a href="https://dev.vantiq.com/docs/system/rules/index.html#variable-references">VAIL Reference Guide ： Variable References</a></p>
+<h2 id="実装サンプル">実装サンプル </h2>
+<ul>
+<li><a href="./data/vail_data_1.37.zip">VAIL 入門（基礎）の実装サンプル（Vantiq 1.37）</a></li>
+</ul>
+
+	</div>
+	
+	
+  
+  
+  
+  
+  
+  
+
+  </body></html>
